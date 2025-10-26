@@ -10,7 +10,11 @@ const feedbackRoutes = require("./routes/feedback")
 const app = express()
 
 // Middleware
-app.use(cors())
+// Configure CORS to allow requests from frontend
+app.use(cors({
+  origin: process.env.FRONTEND_URL || '*', // Allow all origins for now, set specific URL in production
+  credentials: true
+}))
 app.use(express.json())
 
 // Database connection
