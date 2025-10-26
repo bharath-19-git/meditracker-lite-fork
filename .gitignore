@@ -29,6 +29,7 @@ next-env.d.ts
 # Added entries
 /backend/node_modules
 /frontend/node_modules
+/frontend/package-lock.json
 
 # coverage
 coverage/
